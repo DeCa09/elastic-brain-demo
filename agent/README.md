@@ -58,3 +58,14 @@ The baseline said openly that it found no definition and was guessing. That is t
 - Keep Agent Builder for the answer with context. It shows Elastic's own product.
 - Use the `baseline/` session if you want to show the uninformed agent live. It costs no trial allowance.
 - If the trial's LLM limit blocks Agent Builder, run both sessions here. The context layer is the same index; only the agent changes. That is also a fair answer to "does this lock us into your agent?": no, any agent that can run a query can read the layer.
+
+## Same test on a smaller model
+
+Repeated on Sonnet 5.5, one run each, 18 November 2026. The first test above ran on Fable 5.2.
+
+| | Baseline | With context |
+|---|---|---|
+| Answer | Wrong: the same 10 arrangements, same guess (high criticality) | Right: all 12 |
+| Commands against Elasticsearch | 10, two of them failed | 2 |
+
+Both models made the same mistake without context and gave the same correct answer with it. One run per model, so this is an indication, not proof.
