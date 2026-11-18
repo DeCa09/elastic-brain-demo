@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="Inter, Helvetica, Arial, sans-serif">
+<rect width="960" height="600" fill="#fbfaf6"/>
+<text x="90" y="40" font-size="24" font-weight="600" fill="#1f1f1e">Context moves every model up; the model only moves the price</text>
+<text x="90" y="66" font-size="14" fill="#6b6a63">Correct answers out of 5 bank questions, by model, without and with the Elasticsearch context layer</text>
+<rect x="90.0" y="81.30000000000007" width="282.1647342521478" height="69.69999999999993" fill="#dff3e6"/>
+<text x="367.41719939722975" y="141.15999999999997" font-size="12" fill="#1c6b3c" text-anchor="end">Cheap and correct</text>
+<line x1="90" x2="920" y1="520.0" y2="520.0" stroke="#e4e2da"/>
+<text x="78" y="525.0" font-size="13" fill="#6b6a63" text-anchor="end">0</text>
+<line x1="90" x2="920" y1="438.0" y2="438.0" stroke="#e4e2da"/>
+<text x="78" y="443.0" font-size="13" fill="#6b6a63" text-anchor="end">1</text>
+<line x1="90" x2="920" y1="356.0" y2="356.0" stroke="#e4e2da"/>
+<text x="78" y="361.0" font-size="13" fill="#6b6a63" text-anchor="end">2</text>
+<line x1="90" x2="920" y1="274.0" y2="274.0" stroke="#e4e2da"/>
+<text x="78" y="279.0" font-size="13" fill="#6b6a63" text-anchor="end">3</text>
+<line x1="90" x2="920" y1="192.0" y2="192.0" stroke="#e4e2da"/>
+<text x="78" y="197.0" font-size="13" fill="#6b6a63" text-anchor="end">4</text>
+<line x1="90" x2="920" y1="110.0" y2="110.0" stroke="#e4e2da"/>
+<text x="78" y="115.0" font-size="13" fill="#6b6a63" text-anchor="end">5</text>
+<line x1="218.31631508865152" x2="218.31631508865152" y1="520" y2="526" stroke="#6b6a63"/>
+<text x="218.31631508865152" y="544" font-size="13" fill="#6b6a63" text-anchor="middle">$0.01</text>
+<line x1="372.1647342521478" x2="372.1647342521478" y1="520" y2="526" stroke="#6b6a63"/>
+<text x="372.1647342521478" y="544" font-size="13" fill="#6b6a63" text-anchor="middle">$0.03</text>
+<line x1="540.767720557669" x2="540.767720557669" y1="520" y2="526" stroke="#6b6a63"/>
+<text x="540.767720557669" y="544" font-size="13" fill="#6b6a63" text-anchor="middle">$0.1</text>
+<line x1="694.6161397211654" x2="694.6161397211654" y1="520" y2="526" stroke="#6b6a63"/>
+<text x="694.6161397211654" y="544" font-size="13" fill="#6b6a63" text-anchor="middle">$0.3</text>
+<line x1="863.2191260266867" x2="863.2191260266867" y1="520" y2="526" stroke="#6b6a63"/>
+<text x="863.2191260266867" y="544" font-size="13" fill="#6b6a63" text-anchor="middle">$1</text>
+<text x="505.0" y="578" font-size="13" fill="#6b6a63" text-anchor="middle">Estimated cost per question (USD, log scale)</text>
+<text transform="translate(28,315.0) rotate(-90)" font-size="13" fill="#6b6a63" text-anchor="middle">Correct answers (of 5)</text>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker></defs>
+<line x1="179.1" y1="264.0" x2="170.2" y2="123.0" stroke="#2a78d6" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="179.1" cy="274.0" r="8" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/>
+<circle cx="170.2" cy="110.0" r="8" fill="#2a78d6" stroke="#fbfaf6" stroke-width="2"/>
+<text x="170.2" y="92.0" font-size="14" font-weight="600" fill="#1f1f1e" text-anchor="middle">Haiku 5.5</text>
+<text x="179.1" y="300.0" font-size="12" fill="#6b6a63" text-anchor="middle">$0.0076</text>
+<line x1="585.2" y1="264.0" x2="587.1" y2="123.0" stroke="#2a78d6" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="585.2" cy="274.0" r="8" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/>
+<circle cx="587.1" cy="110.0" r="8" fill="#2a78d6" stroke="#fbfaf6" stroke-width="2"/>
+<text x="587.1" y="92.0" font-size="14" font-weight="600" fill="#1f1f1e" text-anchor="middle">Sonnet 5.5</text>
+<text x="585.2" y="300.0" font-size="12" fill="#6b6a63" text-anchor="middle">$0.14</text>
+<line x1="688.7" y1="264.0" x2="683.7" y2="123.0" stroke="#2a78d6" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="688.7" cy="274.0" r="8" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/>
+<circle cx="683.7" cy="110.0" r="8" fill="#2a78d6" stroke="#fbfaf6" stroke-width="2"/>
+<text x="683.7" y="92.0" font-size="14" font-weight="600" fill="#1f1f1e" text-anchor="middle">Opus 5.5</text>
+<text x="688.7" y="300.0" font-size="12" fill="#6b6a63" text-anchor="middle">$0.29</text>
+<line x1="795.2" y1="264.0" x2="781.1" y2="123.0" stroke="#2a78d6" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="795.2" cy="274.0" r="8" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/>
+<circle cx="781.1" cy="110.0" r="8" fill="#2a78d6" stroke="#fbfaf6" stroke-width="2"/>
+<text x="781.1" y="92.0" font-size="14" font-weight="600" fill="#1f1f1e" text-anchor="middle">Fable 5.2</text>
+<text x="795.2" y="300.0" font-size="12" fill="#6b6a63" text-anchor="middle">$0.62</text>
+<circle cx="730" cy="429.79999999999995" r="7" fill="#2a78d6"/><text x="744" y="434.79999999999995" font-size="13" fill="#1f1f1e">With context layer</text>
+<circle cx="730" cy="470.8" r="7" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/><text x="744" y="475.8" font-size="13" fill="#1f1f1e">Without context</text>
+<text x="920" y="327.29999999999995" font-size="11" fill="#6b6a63" text-anchor="end">One run per cell, 40 runs, 18 Nov 2026. Fictional data.</text>
+<text x="920" y="342.29999999999995" font-size="11" fill="#6b6a63" text-anchor="end">Questions, data and context written by the presenter.</text>
+<text x="920" y="357.29999999999995" font-size="11" fill="#6b6a63" text-anchor="end">Cost is an estimate: reported tokens x input list price.</text>
+</svg>

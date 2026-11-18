@@ -31,3 +31,11 @@ opus,base,location,1,7,69050,22,
 opus,base,reportable,0,6,73890,27,guessed severity high
 opus,base,late-breaches,1,8,73935,28,
 opus,base,material,0,9,71140,30,guessed high criticality; 9 ids
+fable,ctx,overdue,1,2,68471,10,
+fable,ctx,reportable,1,2,69533,10,
+fable,ctx,location,1,2,70023,11,
+fable,ctx,late-breaches,1,4,69130,15,one failed query
+fable,base,location,1,6,70724,16,
+fable,base,overdue,1,6,75498,22,
+fable,base,late-breaches,1,7,82265,26,
+fable,base,reportable,0,12,82033,29,guessed severity high
