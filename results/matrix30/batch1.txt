@@ -1,0 +1,10 @@
+Q01: Which provider runs arrangement OUT-007? Give the provider code.
+Q04: Which arrangements have their data location in the EU?
+Q07: Which reportable incidents did we have in the third quarter of 2026?
+Q10: For which arrangements is an exit plan required?
+Q13: Welche Altverträge verletzen die Regeln zum Datenstandort?
+Q16: Which reportable incidents involved a material outsourcing?
+Q19: Which cloud-related incidents happened in the first half of 2026?
+Q22: Which arrangements that hold client data in the EU are allowed under our directive?
+Q25: For how many months do we keep application documents of candidates we did not hire? Give the number.
+Q28: Welche Auslagerungen sind Tier-1-Auslagerungen?

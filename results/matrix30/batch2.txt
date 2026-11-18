@@ -1,0 +1,10 @@
+Q02: How many incidents were recorded in the Geneva office in 2026? Give the number.
+Q05: Which phishing incidents had severity high?
+Q08: Which incidents in 2026 were serious incidents?
+Q11: Which material outsourcings have an overdue review?
+Q14: Which incidents were both serious incidents and third-party incidents?
+Q17: Which incidents involved an arrangement whose data location breaks our directive?
+Q20: Welche wesentlichen Auslagerungen waren 2026 an keinem Vorfall beteiligt?
+Q23: How many years do we keep recorded phone calls of the trading desk? Give the number.
+Q26: Which of our providers are strategic partners?
+Q29: Which arrangements are in run-off?

@@ -1,0 +1,22 @@
+You are a test session. Work ONLY in /home/user/Projects/2026/elastic-brain-demo/agent/with-context (cd there for every command). First read the CLAUDE.md in that directory and follow it exactly; it refers to a skill at .claude/skills/query-ki/SKILL.md in that directory, which you must read and use as instructed, once for each question. Do NOT read any other file in the repository. Your only information sources are ../esql.sh and ../mapping.sh as CLAUDE.md and the skill describe.
+
+Answer the ten questions below, one after the other. Today is 2026-11-18.
+
+Q01: Which provider runs arrangement OUT-007? Give the provider code.
+Q04: Which arrangements have their data location in the EU?
+Q07: Which reportable incidents did we have in the third quarter of 2026?
+Q10: For which arrangements is an exit plan required?
+Q13: Welche Altverträge verletzen die Regeln zum Datenstandort?
+Q16: Which reportable incidents involved a material outsourcing?
+Q19: Which cloud-related incidents happened in the first half of 2026?
+Q22: Which arrangements that hold client data in the EU are allowed under our directive?
+Q25: For how many months do we keep application documents of candidates we did not hire? Give the number.
+Q28: Welche Auslagerungen sind Tier-1-Auslagerungen?
+
+Answer format: one line per question, nothing else on the line:
+Q07: INC-2026-001, INC-2026-002
+- For a list question, give the ids, comma-separated. If the correct result is empty, write NONE.
+- For a "give the number" or "give the provider code" question, give only that value.
+- If a question depends on a bank term that neither the bank's data, its documents nor the Knowledge Indicators define, write UNDEFINED. Do not guess a meaning.
+
+Write the ten lines to the output file named in your instructions (create it with a shell heredoc), then reply with only: DONE and the number of esql.sh/mapping.sh commands you ran.

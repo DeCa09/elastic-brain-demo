@@ -1,0 +1,317 @@
+[
+ {
+  "id": "Q01",
+  "tier": "lookup",
+  "question": "Which provider runs arrangement OUT-007? Give the provider code.",
+  "expected": [
+   "Provider G"
+  ]
+ },
+ {
+  "id": "Q02",
+  "tier": "lookup",
+  "question": "How many incidents were recorded in the Geneva office in 2026? Give the number.",
+  "expected": [
+   "20"
+  ]
+ },
+ {
+  "id": "Q03",
+  "tier": "lookup",
+  "question": "Welche Auslagerungen haben den Status 'planned'?",
+  "expected": [
+   "OUT-021"
+  ]
+ },
+ {
+  "id": "Q04",
+  "tier": "lookup",
+  "question": "Which arrangements have their data location in the EU?",
+  "expected": [
+   "OUT-003",
+   "OUT-004",
+   "OUT-014"
+  ]
+ },
+ {
+  "id": "Q05",
+  "tier": "lookup",
+  "question": "Which phishing incidents had severity high?",
+  "expected": [
+   "INC-2026-011",
+   "INC-2026-022",
+   "INC-2026-034",
+   "INC-2026-040"
+  ]
+ },
+ {
+  "id": "Q06",
+  "tier": "definition",
+  "question": "Welche unserer Auslagerungen gelten als wesentliche Auslagerungen?",
+  "expected": [
+   "OUT-001",
+   "OUT-002",
+   "OUT-003",
+   "OUT-004",
+   "OUT-006",
+   "OUT-007",
+   "OUT-008",
+   "OUT-010",
+   "OUT-011",
+   "OUT-016",
+   "OUT-019",
+   "OUT-024"
+  ]
+ },
+ {
+  "id": "Q07",
+  "tier": "definition",
+  "question": "Which reportable incidents did we have in the third quarter of 2026?",
+  "expected": [
+   "INC-2026-001",
+   "INC-2026-004",
+   "INC-2026-021",
+   "INC-2026-031"
+  ]
+ },
+ {
+  "id": "Q08",
+  "tier": "definition",
+  "question": "Which incidents in 2026 were serious incidents?",
+  "expected": [
+   "INC-2026-010",
+   "INC-2026-014",
+   "INC-2026-020",
+   "INC-2026-036",
+   "INC-2026-043"
+  ]
+ },
+ {
+  "id": "Q09",
+  "tier": "definition",
+  "question": "Welche Vorfälle sind Altfälle?",
+  "expected": [
+   "INC-2026-004",
+   "INC-2026-006",
+   "INC-2026-025",
+   "INC-2026-026",
+   "INC-2026-027",
+   "INC-2026-032",
+   "INC-2026-034"
+  ]
+ },
+ {
+  "id": "Q10",
+  "tier": "definition",
+  "question": "For which arrangements is an exit plan required?",
+  "expected": [
+   "OUT-001",
+   "OUT-002",
+   "OUT-003",
+   "OUT-004",
+   "OUT-008",
+   "OUT-011",
+   "OUT-016",
+   "OUT-019",
+   "OUT-024"
+  ]
+ },
+ {
+  "id": "Q11",
+  "tier": "two-definitions",
+  "question": "Which material outsourcings have an overdue review?",
+  "expected": [
+   "OUT-002",
+   "OUT-007",
+   "OUT-010"
+  ]
+ },
+ {
+  "id": "Q12",
+  "tier": "two-definitions",
+  "question": "Which large contracts are not fully approved?",
+  "expected": [
+   "OUT-021"
+  ]
+ },
+ {
+  "id": "Q13",
+  "tier": "two-definitions",
+  "question": "Welche Altverträge verletzen die Regeln zum Datenstandort?",
+  "expected": [
+   "OUT-003",
+   "OUT-014",
+   "OUT-019"
+  ]
+ },
+ {
+  "id": "Q14",
+  "tier": "two-definitions",
+  "question": "Which incidents were both serious incidents and third-party incidents?",
+  "expected": [
+   "INC-2026-010",
+   "INC-2026-014",
+   "INC-2026-020",
+   "INC-2026-043"
+  ]
+ },
+ {
+  "id": "Q15",
+  "tier": "two-definitions",
+  "question": "Which legacy contracts need an exit plan and are also large contracts?",
+  "expected": [
+   "OUT-019"
+  ]
+ },
+ {
+  "id": "Q16",
+  "tier": "join",
+  "question": "Which reportable incidents involved a material outsourcing?",
+  "expected": [
+   "INC-2026-001",
+   "INC-2026-002",
+   "INC-2026-033",
+   "INC-2026-038",
+   "INC-2026-041",
+   "INC-2026-043"
+  ]
+ },
+ {
+  "id": "Q17",
+  "tier": "join",
+  "question": "Which incidents involved an arrangement whose data location breaks our directive?",
+  "expected": [
+   "INC-2026-001",
+   "INC-2026-010",
+   "INC-2026-027",
+   "INC-2026-035",
+   "INC-2026-037",
+   "INC-2026-038",
+   "INC-2026-043"
+  ]
+ },
+ {
+  "id": "Q18",
+  "tier": "join",
+  "question": "Which arrangements were involved in two or more incidents in 2026?",
+  "expected": [
+   "OUT-003",
+   "OUT-011",
+   "OUT-014",
+   "OUT-018",
+   "OUT-019"
+  ]
+ },
+ {
+  "id": "Q19",
+  "tier": "join",
+  "question": "Which cloud-related incidents happened in the first half of 2026?",
+  "expected": [
+   "INC-2026-002",
+   "INC-2026-005",
+   "INC-2026-010",
+   "INC-2026-014",
+   "INC-2026-018",
+   "INC-2026-019",
+   "INC-2026-025",
+   "INC-2026-026",
+   "INC-2026-027",
+   "INC-2026-032",
+   "INC-2026-035",
+   "INC-2026-038",
+   "INC-2026-041",
+   "INC-2026-042",
+   "INC-2026-043"
+  ]
+ },
+ {
+  "id": "Q20",
+  "tier": "join",
+  "question": "Welche wesentlichen Auslagerungen waren 2026 an keinem Vorfall beteiligt?",
+  "expected": [
+   "OUT-006",
+   "OUT-007",
+   "OUT-010"
+  ]
+ },
+ {
+  "id": "Q21",
+  "tier": "superseded-rule",
+  "question": "How many years do we keep client files after the business relationship ends? Give the number.",
+  "expected": [
+   "10"
+  ]
+ },
+ {
+  "id": "Q22",
+  "tier": "superseded-rule",
+  "question": "Which arrangements that hold client data in the EU are allowed under our directive?",
+  "expected": [
+   "OUT-004"
+  ]
+ },
+ {
+  "id": "Q23",
+  "tier": "superseded-rule",
+  "question": "How many years do we keep recorded phone calls of the trading desk? Give the number.",
+  "expected": [
+   "2"
+  ]
+ },
+ {
+  "id": "Q24",
+  "tier": "superseded-rule",
+  "question": "Wie viele Stellen müssen eine Auslagerung vor der Vertragsunterzeichnung genehmigen? Nenne die Zahl.",
+  "expected": [
+   "3"
+  ]
+ },
+ {
+  "id": "Q25",
+  "tier": "superseded-rule",
+  "question": "For how many months do we keep application documents of candidates we did not hire? Give the number.",
+  "expected": [
+   "6"
+  ]
+ },
+ {
+  "id": "Q26",
+  "tier": "no-definition",
+  "question": "Which of our providers are strategic partners?",
+  "expected": [
+   "UNDEFINED"
+  ]
+ },
+ {
+  "id": "Q27",
+  "tier": "no-definition",
+  "question": "Which incidents in 2026 were near misses?",
+  "expected": [
+   "UNDEFINED"
+  ]
+ },
+ {
+  "id": "Q28",
+  "tier": "no-definition",
+  "question": "Welche Auslagerungen sind Tier-1-Auslagerungen?",
+  "expected": [
+   "UNDEFINED"
+  ]
+ },
+ {
+  "id": "Q29",
+  "tier": "no-definition",
+  "question": "Which arrangements are in run-off?",
+  "expected": [
+   "UNDEFINED"
+  ]
+ },
+ {
+  "id": "Q30",
+  "tier": "no-definition",
+  "question": "Which incidents were client-impacting incidents?",
+  "expected": [
+   "UNDEFINED"
+  ]
+ }
+]

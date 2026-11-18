@@ -333,6 +333,30 @@ DEFINITIONS = [
      "arrangement_id in %s has provider_type == \"cloud\". Two steps: first FROM %s | WHERE "
      "related_arrangement_id IS NOT NULL | STATS n = COUNT(*) BY related_arrangement_id; then check "
      "provider_type for those ids in %s." % (INVENTORY, INCIDENTS, INVENTORY)),
+    # The next six give the rule in words only, without a ready query. They are used by the
+    # 30-question model matrix, where the agent has to compose the query itself.
+    ("def-legacy-contract", "Legacy contract (Altvertrag)",
+     "An outsourcing arrangement in %s is a legacy contract (German: Altvertrag) when its status is "
+     "active and contract_signed is before 1 July 2025, the day W-12 v3.0 came into force. Legacy "
+     "contracts were approved under the old rules and must be re-approved." % INVENTORY),
+    ("def-large-contract", "Large contract (Grossvertrag)",
+     "An outsourcing arrangement in %s is a large contract (German: Grossvertrag) when "
+     "annual_cost_chf is CHF 120,000 or more, whatever its status or criticality." % INVENTORY),
+    ("def-serious-incident", "Serious incident (schwerwiegender Vorfall)",
+     "An incident in %s is serious (German: schwerwiegender Vorfall, French: incident grave) when "
+     "severity is high and category is data_breach or system_outage. Phishing attempts and access "
+     "violations are never serious, whatever their severity." % INCIDENTS),
+    ("def-third-party-incident", "Third-party incident (Drittparteivorfall)",
+     "An incident in %s is a third-party incident (German: Drittparteivorfall) when "
+     "related_arrangement_id is set. That field holds the arrangement_id of the outsourcing "
+     "arrangement in %s that was involved." % (INCIDENTS, INVENTORY)),
+    ("def-exit-plan-required", "Exit plan required (Ausstiegsplan erforderlich)",
+     "An outsourcing arrangement needs a documented exit plan (German: Ausstiegsplan) when it is a "
+     "material outsourcing, as defined in the business definition 'Material outsourcing', and its "
+     "provider_type is cloud."),
+    ("def-stale-incident", "Stale incident (Altfall)",
+     "An incident in %s is stale (German: Altfall) when its status is open and its date lies in a "
+     "calendar quarter before the current one." % INCIDENTS),
 ]
 
 

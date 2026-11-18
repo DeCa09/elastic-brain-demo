@@ -1,0 +1,10 @@
+Q03: Welche Auslagerungen haben den Status 'planned'?
+Q06: Welche unserer Auslagerungen gelten als wesentliche Auslagerungen?
+Q09: Welche Vorfälle sind Altfälle?
+Q12: Which large contracts are not fully approved?
+Q15: Which legacy contracts need an exit plan and are also large contracts?
+Q18: Which arrangements were involved in two or more incidents in 2026?
+Q21: How many years do we keep client files after the business relationship ends? Give the number.
+Q24: Wie viele Stellen müssen eine Auslagerung vor der Vertragsunterzeichnung genehmigen? Nenne die Zahl.
+Q27: Which incidents in 2026 were near misses?
+Q30: Which incidents were client-impacting incidents?
