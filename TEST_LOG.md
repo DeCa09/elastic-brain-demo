@@ -58,3 +58,15 @@ Notes on these runs:
 | U5 | Document-level security on the AI Index | Not part of the demo; a likely question | `QA_PREP.md` |
 | U6 | Repeated runs per question | The numbers are single runs | `results/RESULTS.md` |
 | U7 | The cost of regenerating index profiles with the workflow | Unknown | `QA_PREP.md` |
+
+## Outside agent (Claude Code), 18 November 2026
+
+Question "Welche unserer Auslagerungen gelten als wesentliche Auslagerungen?", one run per session, run as subagents.
+
+| | Baseline | With context |
+|---|---|---|
+| Answer | Wrong (10 ids, guessed high criticality) | Right (12 ids) |
+| Queries | 9 | 2 |
+| Time | 30 s | 17 s |
+
+Details and limits: `agent/README.md`. Not tested: two separate terminal sessions on a Mac.

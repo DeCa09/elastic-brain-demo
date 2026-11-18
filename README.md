@@ -76,3 +76,7 @@ scripts/preflight.sh
 - The trial is free. Nothing here costs money unless you subscribe or connect a paid model of your own.
 - The bank, its registers, its documents and its definitions are fictional. The law texts are real and keep their Fedlex source URLs.
 - Numbers from Elastic's and Snowflake's articles are labelled as theirs wherever they appear.
+
+## Outside agent
+
+`agent/` holds two Claude Code session folders that use the same indices and AI Index without Agent Builder. See `agent/README.md`.

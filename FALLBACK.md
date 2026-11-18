@@ -67,3 +67,7 @@ Cut in this order: question 2 (7:30), the workflow's last run (part of 4:45), qu
 | 1. The trial's LLM quota is exhausted during or just before the demo | High if you use the agents in the hour before the session; medium otherwise, because the limit is not published | No baseline runs live; at most three live questions; no agent use after 12:00; a second model as a switch; yesterday's conversations and screenshots |
 | 2. The flow has not been clicked through in Kibana: a menu, a tab or the steps view is not where the runbook says | Certain to some degree until you have walked through it once | Walk through it the day before and correct the runbook; screenshots per step |
 | 3. The live agent answers differently from my test (agents are not deterministic) | Medium | Expected ids are in the runbook, so you can check the answer on sight; the definition and its query are in the AI Index to show; screenshot of a correct answer |
+
+## If the trial's LLM limit blocks Agent Builder
+
+Run the two Claude Code sessions in `agent/` instead. Same indices, same context layer, no Elastic LLM allowance used. See `agent/README.md`.
