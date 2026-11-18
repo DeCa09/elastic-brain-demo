@@ -16,7 +16,7 @@ This kit is separate from the compliance-assistant demo in `DeCa09/elastic-searc
 | `SETUP.md` | What exists on your Serverless project and what is left for you |
 | `RUNBOOK.md` | The 12-minute demo, minute by minute, with talk track, German terms, queries and questions |
 | `FALLBACK.md` | What to do when something fails, above all the LLM quota |
-| `DECK.md` | 10-slide outline with speaker notes, timings and the cost model |
+| `DECK.md` | 10-slide outline with speaker notes, timings and the cost model. The built slides are a private Slides artifact: https://claude.ai/artifact/DAqTKUkLaPLMBezP4kZbNm |
 | `QA_PREP.md` | Questions per panel role, Cortex Sense, land and expand |
 | `results/RESULTS.md` | The measurement, per question; full answers in `results/answers/` |
 | `diagrams/architecture.svg` | Architecture diagram for slide 4 |
