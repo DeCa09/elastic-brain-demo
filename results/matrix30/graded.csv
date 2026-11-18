@@ -1,0 +1,241 @@
+model,condition,question,tier,correct,answer
+fable,base,Q01,lookup,1,Provider G
+fable,base,Q04,lookup,1,"OUT-003, OUT-004, OUT-014"
+fable,base,Q07,definition,0,UNDEFINED
+fable,base,Q10,definition,0,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-006, OUT-007, OUT-008, OUT-010, OUT-011, OUT-014, OUT-016, OUT-017, OUT-019, OUT-020, OUT-021, OUT-022, OUT-024"
+fable,base,Q13,two-definitions,1,"OUT-003, OUT-014, OUT-019"
+fable,base,Q16,join,0,UNDEFINED
+fable,base,Q19,join,1,"INC-2026-002, INC-2026-005, INC-2026-010, INC-2026-014, INC-2026-018, INC-2026-019, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-035, INC-2026-038, INC-2026-041, INC-2026-042, INC-2026-043"
+fable,base,Q22,superseded-rule,1,OUT-004
+fable,base,Q25,superseded-rule,1,6
+fable,base,Q28,no-definition,1,UNDEFINED
+fable,base,Q02,lookup,1,20
+fable,base,Q05,lookup,1,"INC-2026-011, INC-2026-022, INC-2026-034, INC-2026-040"
+fable,base,Q08,definition,0,UNDEFINED
+fable,base,Q11,two-definitions,0,UNDEFINED
+fable,base,Q14,two-definitions,0,UNDEFINED
+fable,base,Q17,join,1,"INC-2026-001, INC-2026-010, INC-2026-027, INC-2026-035, INC-2026-037, INC-2026-038, INC-2026-043"
+fable,base,Q20,join,0,UNDEFINED
+fable,base,Q23,superseded-rule,1,2
+fable,base,Q26,no-definition,1,UNDEFINED
+fable,base,Q29,no-definition,1,UNDEFINED
+fable,base,Q03,lookup,1,OUT-021
+fable,base,Q06,definition,0,UNDEFINED
+fable,base,Q09,definition,0,UNDEFINED
+fable,base,Q12,two-definitions,0,UNDEFINED
+fable,base,Q15,two-definitions,0,UNDEFINED
+fable,base,Q18,join,1,"OUT-003, OUT-011, OUT-014, OUT-018, OUT-019"
+fable,base,Q21,superseded-rule,1,10
+fable,base,Q24,superseded-rule,1,3
+fable,base,Q27,no-definition,1,UNDEFINED
+fable,base,Q30,no-definition,1,UNDEFINED
+fable,ctx,Q01,lookup,1,Provider G
+fable,ctx,Q04,lookup,1,"OUT-003, OUT-004, OUT-014"
+fable,ctx,Q07,definition,1,"INC-2026-001, INC-2026-004, INC-2026-021, INC-2026-031"
+fable,ctx,Q10,definition,1,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-008, OUT-011, OUT-016, OUT-019, OUT-024"
+fable,ctx,Q13,two-definitions,1,"OUT-003, OUT-014, OUT-019"
+fable,ctx,Q16,join,1,"INC-2026-001, INC-2026-002, INC-2026-033, INC-2026-038, INC-2026-041, INC-2026-043"
+fable,ctx,Q19,join,1,"INC-2026-002, INC-2026-005, INC-2026-010, INC-2026-014, INC-2026-018, INC-2026-019, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-035, INC-2026-038, INC-2026-041, INC-2026-042, INC-2026-043"
+fable,ctx,Q22,superseded-rule,1,OUT-004
+fable,ctx,Q25,superseded-rule,1,6
+fable,ctx,Q28,no-definition,1,UNDEFINED
+fable,ctx,Q02,lookup,1,20
+fable,ctx,Q05,lookup,1,"INC-2026-011, INC-2026-022, INC-2026-034, INC-2026-040"
+fable,ctx,Q08,definition,1,"INC-2026-010, INC-2026-014, INC-2026-020, INC-2026-036, INC-2026-043"
+fable,ctx,Q11,two-definitions,1,"OUT-002, OUT-007, OUT-010"
+fable,ctx,Q14,two-definitions,1,"INC-2026-010, INC-2026-014, INC-2026-020, INC-2026-043"
+fable,ctx,Q17,join,1,"INC-2026-001, INC-2026-010, INC-2026-027, INC-2026-035, INC-2026-037, INC-2026-038, INC-2026-043"
+fable,ctx,Q20,join,1,"OUT-006, OUT-007, OUT-010"
+fable,ctx,Q23,superseded-rule,1,2
+fable,ctx,Q26,no-definition,1,UNDEFINED
+fable,ctx,Q29,no-definition,1,UNDEFINED
+fable,ctx,Q03,lookup,1,OUT-021
+fable,ctx,Q06,definition,1,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-006, OUT-007, OUT-008, OUT-010, OUT-011, OUT-016, OUT-019, OUT-024"
+fable,ctx,Q09,definition,1,"INC-2026-004, INC-2026-006, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-034"
+fable,ctx,Q12,two-definitions,1,OUT-021
+fable,ctx,Q15,two-definitions,1,OUT-019
+fable,ctx,Q18,join,1,"OUT-003, OUT-011, OUT-014, OUT-018, OUT-019"
+fable,ctx,Q21,superseded-rule,1,10
+fable,ctx,Q24,superseded-rule,1,3
+fable,ctx,Q27,no-definition,1,UNDEFINED
+fable,ctx,Q30,no-definition,1,UNDEFINED
+haiku,base,Q01,lookup,1,Provider G
+haiku,base,Q04,lookup,1,"OUT-003, OUT-004, OUT-014"
+haiku,base,Q07,definition,0,UNDEFINED
+haiku,base,Q10,definition,0,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-006, OUT-007, OUT-008, OUT-010, OUT-011, OUT-014, OUT-016, OUT-017, OUT-019, OUT-020, OUT-021, OUT-022, OUT-024"
+haiku,base,Q13,two-definitions,1,"OUT-003, OUT-014, OUT-019"
+haiku,base,Q16,join,0,UNDEFINED
+haiku,base,Q19,join,1,"INC-2026-002, INC-2026-005, INC-2026-010, INC-2026-014, INC-2026-018, INC-2026-019, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-035, INC-2026-038, INC-2026-041, INC-2026-042, INC-2026-043"
+haiku,base,Q22,superseded-rule,1,OUT-004
+haiku,base,Q25,superseded-rule,1,6
+haiku,base,Q28,no-definition,1,UNDEFINED
+haiku,base,Q02,lookup,1,20
+haiku,base,Q05,lookup,1,"INC-2026-011, INC-2026-022, INC-2026-034, INC-2026-040"
+haiku,base,Q08,definition,0,UNDEFINED
+haiku,base,Q11,two-definitions,0,UNDEFINED
+haiku,base,Q14,two-definitions,0,UNDEFINED
+haiku,base,Q17,join,1,"INC-2026-001, INC-2026-010, INC-2026-027, INC-2026-035, INC-2026-037, INC-2026-038, INC-2026-043"
+haiku,base,Q20,join,0,UNDEFINED
+haiku,base,Q23,superseded-rule,1,2
+haiku,base,Q26,no-definition,1,UNDEFINED
+haiku,base,Q29,no-definition,1,UNDEFINED
+haiku,base,Q03,lookup,1,OUT-021
+haiku,base,Q06,definition,0,UNDEFINED
+haiku,base,Q09,definition,0,UNDEFINED
+haiku,base,Q12,two-definitions,0,UNDEFINED
+haiku,base,Q15,two-definitions,0,UNDEFINED
+haiku,base,Q18,join,1,"OUT-003, OUT-011, OUT-014, OUT-018, OUT-019"
+haiku,base,Q21,superseded-rule,1,10
+haiku,base,Q24,superseded-rule,1,3
+haiku,base,Q27,no-definition,1,UNDEFINED
+haiku,base,Q30,no-definition,1,UNDEFINED
+haiku,ctx,Q01,lookup,1,Provider G
+haiku,ctx,Q04,lookup,1,"OUT-003, OUT-004, OUT-014"
+haiku,ctx,Q07,definition,1,"INC-2026-001, INC-2026-004, INC-2026-021, INC-2026-031"
+haiku,ctx,Q10,definition,1,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-008, OUT-011, OUT-016, OUT-019, OUT-024"
+haiku,ctx,Q13,two-definitions,1,"OUT-003, OUT-014, OUT-019"
+haiku,ctx,Q16,join,1,"INC-2026-001, INC-2026-002, INC-2026-033, INC-2026-038, INC-2026-041, INC-2026-043"
+haiku,ctx,Q19,join,1,"INC-2026-002, INC-2026-005, INC-2026-010, INC-2026-014, INC-2026-018, INC-2026-019, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-035, INC-2026-038, INC-2026-041, INC-2026-042, INC-2026-043"
+haiku,ctx,Q22,superseded-rule,1,OUT-004
+haiku,ctx,Q25,superseded-rule,1,6
+haiku,ctx,Q28,no-definition,1,UNDEFINED
+haiku,ctx,Q02,lookup,1,20
+haiku,ctx,Q05,lookup,1,"INC-2026-011, INC-2026-022, INC-2026-034, INC-2026-040"
+haiku,ctx,Q08,definition,1,"INC-2026-010, INC-2026-014, INC-2026-020, INC-2026-036, INC-2026-043"
+haiku,ctx,Q11,two-definitions,1,"OUT-002, OUT-007, OUT-010"
+haiku,ctx,Q14,two-definitions,1,"INC-2026-010, INC-2026-014, INC-2026-020, INC-2026-043"
+haiku,ctx,Q17,join,1,"INC-2026-001, INC-2026-010, INC-2026-027, INC-2026-035, INC-2026-037, INC-2026-038, INC-2026-043"
+haiku,ctx,Q20,join,1,"OUT-006, OUT-007, OUT-010"
+haiku,ctx,Q23,superseded-rule,0,UNDEFINED
+haiku,ctx,Q26,no-definition,1,UNDEFINED
+haiku,ctx,Q29,no-definition,1,UNDEFINED
+haiku,ctx,Q03,lookup,1,OUT-021
+haiku,ctx,Q06,definition,1,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-006, OUT-007, OUT-008, OUT-010, OUT-011, OUT-016, OUT-019, OUT-024"
+haiku,ctx,Q09,definition,1,"INC-2026-004, INC-2026-006, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-034"
+haiku,ctx,Q12,two-definitions,1,OUT-021
+haiku,ctx,Q15,two-definitions,1,OUT-019
+haiku,ctx,Q18,join,1,"OUT-003, OUT-011, OUT-014, OUT-018, OUT-019"
+haiku,ctx,Q21,superseded-rule,1,10
+haiku,ctx,Q24,superseded-rule,1,3
+haiku,ctx,Q27,no-definition,1,UNDEFINED
+haiku,ctx,Q30,no-definition,1,UNDEFINED
+opus,base,Q01,lookup,1,Provider G
+opus,base,Q04,lookup,1,"OUT-003, OUT-004, OUT-014"
+opus,base,Q07,definition,0,UNDEFINED
+opus,base,Q10,definition,0,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-006, OUT-007, OUT-008, OUT-010, OUT-011, OUT-014, OUT-016, OUT-017, OUT-019, OUT-020, OUT-021, OUT-022, OUT-024"
+opus,base,Q13,two-definitions,1,"OUT-003, OUT-014, OUT-019"
+opus,base,Q16,join,0,UNDEFINED
+opus,base,Q19,join,1,"INC-2026-041, INC-2026-002, INC-2026-042, INC-2026-018, INC-2026-038, INC-2026-027, INC-2026-026, INC-2026-014, INC-2026-035, INC-2026-043, INC-2026-005, INC-2026-010, INC-2026-025, INC-2026-019, INC-2026-032"
+opus,base,Q22,superseded-rule,1,OUT-004
+opus,base,Q25,superseded-rule,1,6
+opus,base,Q28,no-definition,1,UNDEFINED
+opus,base,Q02,lookup,1,20
+opus,base,Q05,lookup,1,"INC-2026-011, INC-2026-022, INC-2026-034, INC-2026-040"
+opus,base,Q08,definition,0,UNDEFINED
+opus,base,Q11,two-definitions,0,UNDEFINED
+opus,base,Q14,two-definitions,0,UNDEFINED
+opus,base,Q17,join,1,"INC-2026-001, INC-2026-010, INC-2026-027, INC-2026-035, INC-2026-037, INC-2026-038, INC-2026-043"
+opus,base,Q20,join,0,UNDEFINED
+opus,base,Q23,superseded-rule,1,2
+opus,base,Q26,no-definition,1,UNDEFINED
+opus,base,Q29,no-definition,1,UNDEFINED
+opus,base,Q03,lookup,1,OUT-021
+opus,base,Q06,definition,0,UNDEFINED
+opus,base,Q09,definition,0,UNDEFINED
+opus,base,Q12,two-definitions,0,UNDEFINED
+opus,base,Q15,two-definitions,0,UNDEFINED
+opus,base,Q18,join,1,"OUT-003, OUT-011, OUT-014, OUT-018, OUT-019"
+opus,base,Q21,superseded-rule,1,10
+opus,base,Q24,superseded-rule,1,3
+opus,base,Q27,no-definition,1,UNDEFINED
+opus,base,Q30,no-definition,1,UNDEFINED
+opus,ctx,Q01,lookup,1,Provider G
+opus,ctx,Q04,lookup,1,"OUT-003, OUT-004, OUT-014"
+opus,ctx,Q07,definition,1,"INC-2026-001, INC-2026-004, INC-2026-021, INC-2026-031"
+opus,ctx,Q10,definition,1,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-008, OUT-011, OUT-016, OUT-019, OUT-024"
+opus,ctx,Q13,two-definitions,1,"OUT-003, OUT-014, OUT-019"
+opus,ctx,Q16,join,1,"INC-2026-001, INC-2026-002, INC-2026-033, INC-2026-038, INC-2026-041, INC-2026-043"
+opus,ctx,Q19,join,1,"INC-2026-002, INC-2026-005, INC-2026-010, INC-2026-014, INC-2026-018, INC-2026-019, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-035, INC-2026-038, INC-2026-041, INC-2026-042, INC-2026-043"
+opus,ctx,Q22,superseded-rule,1,OUT-004
+opus,ctx,Q25,superseded-rule,1,6
+opus,ctx,Q28,no-definition,1,UNDEFINED
+opus,ctx,Q02,lookup,1,20
+opus,ctx,Q05,lookup,1,"INC-2026-011, INC-2026-022, INC-2026-034, INC-2026-040"
+opus,ctx,Q08,definition,1,"INC-2026-010, INC-2026-014, INC-2026-020, INC-2026-036, INC-2026-043"
+opus,ctx,Q11,two-definitions,1,"OUT-002, OUT-007, OUT-010"
+opus,ctx,Q14,two-definitions,1,"INC-2026-010, INC-2026-014, INC-2026-020, INC-2026-043"
+opus,ctx,Q17,join,1,"INC-2026-001, INC-2026-010, INC-2026-027, INC-2026-035, INC-2026-037, INC-2026-038, INC-2026-043"
+opus,ctx,Q20,join,1,"OUT-006, OUT-007, OUT-010"
+opus,ctx,Q23,superseded-rule,1,2
+opus,ctx,Q26,no-definition,1,UNDEFINED
+opus,ctx,Q29,no-definition,1,UNDEFINED
+opus,ctx,Q03,lookup,1,OUT-021
+opus,ctx,Q06,definition,1,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-006, OUT-007, OUT-008, OUT-010, OUT-011, OUT-016, OUT-019, OUT-024"
+opus,ctx,Q09,definition,1,"INC-2026-004, INC-2026-006, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-034"
+opus,ctx,Q12,two-definitions,1,OUT-021
+opus,ctx,Q15,two-definitions,1,OUT-019
+opus,ctx,Q18,join,1,"OUT-003, OUT-011, OUT-014, OUT-018, OUT-019"
+opus,ctx,Q21,superseded-rule,1,10
+opus,ctx,Q24,superseded-rule,1,3
+opus,ctx,Q27,no-definition,1,UNDEFINED
+opus,ctx,Q30,no-definition,1,UNDEFINED
+sonnet,base,Q01,lookup,1,Provider G
+sonnet,base,Q04,lookup,1,"OUT-003, OUT-004, OUT-014"
+sonnet,base,Q07,definition,0,UNDEFINED
+sonnet,base,Q10,definition,0,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-006, OUT-007, OUT-008, OUT-010, OUT-011, OUT-014, OUT-016, OUT-017, OUT-019, OUT-020, OUT-021, OUT-022, OUT-024"
+sonnet,base,Q13,two-definitions,0,UNDEFINED
+sonnet,base,Q16,join,0,UNDEFINED
+sonnet,base,Q19,join,1,"INC-2026-002, INC-2026-005, INC-2026-010, INC-2026-014, INC-2026-018, INC-2026-019, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-035, INC-2026-038, INC-2026-041, INC-2026-042, INC-2026-043"
+sonnet,base,Q22,superseded-rule,1,OUT-004
+sonnet,base,Q25,superseded-rule,1,6
+sonnet,base,Q28,no-definition,1,UNDEFINED
+sonnet,base,Q02,lookup,1,20
+sonnet,base,Q05,lookup,1,"INC-2026-011, INC-2026-022, INC-2026-034, INC-2026-040"
+sonnet,base,Q08,definition,0,UNDEFINED
+sonnet,base,Q11,two-definitions,0,UNDEFINED
+sonnet,base,Q14,two-definitions,0,UNDEFINED
+sonnet,base,Q17,join,1,"INC-2026-001, INC-2026-010, INC-2026-027, INC-2026-035, INC-2026-037, INC-2026-038, INC-2026-043"
+sonnet,base,Q20,join,0,UNDEFINED
+sonnet,base,Q23,superseded-rule,1,2
+sonnet,base,Q26,no-definition,1,UNDEFINED
+sonnet,base,Q29,no-definition,1,UNDEFINED
+sonnet,base,Q03,lookup,1,OUT-021
+sonnet,base,Q06,definition,0,UNDEFINED
+sonnet,base,Q09,definition,0,UNDEFINED
+sonnet,base,Q12,two-definitions,0,UNDEFINED
+sonnet,base,Q15,two-definitions,0,UNDEFINED
+sonnet,base,Q18,join,1,"OUT-003, OUT-011, OUT-014, OUT-018, OUT-019"
+sonnet,base,Q21,superseded-rule,1,10
+sonnet,base,Q24,superseded-rule,1,3
+sonnet,base,Q27,no-definition,1,UNDEFINED
+sonnet,base,Q30,no-definition,1,UNDEFINED
+sonnet,ctx,Q01,lookup,1,Provider G
+sonnet,ctx,Q04,lookup,1,"OUT-003, OUT-004, OUT-014"
+sonnet,ctx,Q07,definition,1,"INC-2026-001, INC-2026-004, INC-2026-021, INC-2026-031"
+sonnet,ctx,Q10,definition,1,"OUT-001, OUT-002, OUT-003, OUT-004, OUT-008, OUT-011, OUT-016, OUT-019, OUT-024"
+sonnet,ctx,Q13,two-definitions,1,"OUT-003, OUT-014, OUT-019"
+sonnet,ctx,Q16,join,1,"INC-2026-001, INC-2026-002, INC-2026-033, INC-2026-038, INC-2026-041, INC-2026-043"
+sonnet,ctx,Q19,join,1,"INC-2026-002, INC-2026-005, INC-2026-010, INC-2026-014, INC-2026-018, INC-2026-019, INC-2026-025, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-035, INC-2026-038, INC-2026-041, INC-2026-042, INC-2026-043"
+sonnet,ctx,Q22,superseded-rule,1,OUT-004
+sonnet,ctx,Q25,superseded-rule,1,6
+sonnet,ctx,Q28,no-definition,1,UNDEFINED
+sonnet,ctx,Q02,lookup,1,20
+sonnet,ctx,Q05,lookup,1,"INC-2026-011, INC-2026-022, INC-2026-034, INC-2026-040"
+sonnet,ctx,Q08,definition,1,"INC-2026-010, INC-2026-014, INC-2026-020, INC-2026-036, INC-2026-043"
+sonnet,ctx,Q11,two-definitions,1,"OUT-002, OUT-007, OUT-010"
+sonnet,ctx,Q14,two-definitions,1,"INC-2026-010, INC-2026-014, INC-2026-020, INC-2026-043"
+sonnet,ctx,Q17,join,1,"INC-2026-001, INC-2026-010, INC-2026-027, INC-2026-035, INC-2026-037, INC-2026-038, INC-2026-043"
+sonnet,ctx,Q20,join,1,"OUT-006, OUT-007, OUT-010"
+sonnet,ctx,Q23,superseded-rule,1,2
+sonnet,ctx,Q26,no-definition,1,UNDEFINED
+sonnet,ctx,Q29,no-definition,1,UNDEFINED
+sonnet,ctx,Q03,lookup,1,OUT-021
+sonnet,ctx,Q06,definition,1,"OUT-002, OUT-006, OUT-003, OUT-007, OUT-016, OUT-019, OUT-024, OUT-010, OUT-011, OUT-008, OUT-001, OUT-004"
+sonnet,ctx,Q09,definition,1,"INC-2026-025, INC-2026-004, INC-2026-006, INC-2026-026, INC-2026-027, INC-2026-032, INC-2026-034"
+sonnet,ctx,Q12,two-definitions,1,OUT-021
+sonnet,ctx,Q15,two-definitions,1,OUT-019
+sonnet,ctx,Q18,join,1,"OUT-003, OUT-011, OUT-014, OUT-018, OUT-019"
+sonnet,ctx,Q21,superseded-rule,1,10
+sonnet,ctx,Q24,superseded-rule,1,3
+sonnet,ctx,Q27,no-definition,1,UNDEFINED
+sonnet,ctx,Q30,no-definition,1,UNDEFINED

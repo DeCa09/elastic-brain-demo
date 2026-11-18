@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 680" font-family="Inter, Helvetica, Arial, sans-serif">
+<rect width="1280" height="680" fill="#fbfaf6"/>
+<text x="80" y="42" font-size="26" font-weight="600" fill="#1f1f1e">Context lifts every model to the top; without it, none gets past 19 of 30</text>
+<text x="80" y="70" font-size="15" fill="#6b6a63">30 bank questions per model, without and with the Elasticsearch context layer. Left: total score against cost. Right: score by kind of question.</text>
+<rect x="80.0" y="148.5" width="231.3703965076133" height="64.5" fill="#dff3e6"/>
+<text x="305.8289174557663" y="204.39999999999998" font-size="12" fill="#1c6b3c" text-anchor="end">Cheap and correct</text>
+<line x1="80" x2="600" y1="600.0" y2="600.0" stroke="#e4e2da"/>
+<text x="68" y="605.0" font-size="13" fill="#6b6a63" text-anchor="end">0</text>
+<line x1="80" x2="600" y1="456.6666666666667" y2="456.6666666666667" stroke="#e4e2da"/>
+<text x="68" y="461.6666666666667" font-size="13" fill="#6b6a63" text-anchor="end">10</text>
+<line x1="80" x2="600" y1="313.33333333333337" y2="313.33333333333337" stroke="#e4e2da"/>
+<text x="68" y="318.33333333333337" font-size="13" fill="#6b6a63" text-anchor="end">20</text>
+<line x1="80" x2="600" y1="170.0" y2="170.0" stroke="#e4e2da"/>
+<text x="68" y="175.0" font-size="13" fill="#6b6a63" text-anchor="end">30</text>
+<line x1="128.10852205781066" x2="128.10852205781066" y1="600" y2="606" stroke="#6b6a63"/>
+<text x="128.10852205781066" y="624" font-size="13" fill="#6b6a63" text-anchor="middle">$0.001</text>
+<line x1="344.9613199257491" x2="344.9613199257491" y1="600" y2="606" stroke="#6b6a63"/>
+<text x="344.9613199257491" y="624" font-size="13" fill="#6b6a63" text-anchor="middle">$0.01</text>
+<line x1="561.8141177936875" x2="561.8141177936875" y1="600" y2="606" stroke="#6b6a63"/>
+<text x="561.8141177936875" y="624" font-size="13" fill="#6b6a63" text-anchor="middle">$0.1</text>
+<text x="340.0" y="652" font-size="13" fill="#6b6a63" text-anchor="middle">Estimated cost per question (USD, log scale)</text>
+<text transform="translate(26,385.0) rotate(-90)" font-size="13" fill="#6b6a63" text-anchor="middle">Correct answers (of 30)</text>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker></defs>
+<line x1="128.6" y1="317.7" x2="144.3" y2="197.3" stroke="#2a78d6" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="128.6" cy="327.7" r="8" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/>
+<circle cx="144.3" cy="184.3" r="8" fill="#2a78d6" stroke="#fbfaf6" stroke-width="2"/>
+<text x="144.3" y="150.3" font-size="14" font-weight="600" fill="#1f1f1e" text-anchor="middle">Haiku 5.5</text>
+<text x="144.3" y="167.3" font-size="13" fill="#1f1f1e" text-anchor="middle">29</text>
+<text x="128.6" y="354.7" font-size="13" fill="#6b6a63" text-anchor="middle">19</text>
+<line x1="394.6" y1="332.0" x2="407.8" y2="183.0" stroke="#2a78d6" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="394.6" cy="342.0" r="8" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/>
+<circle cx="407.8" cy="170.0" r="8" fill="#2a78d6" stroke="#fbfaf6" stroke-width="2"/>
+<text x="407.8" y="136.0" font-size="14" font-weight="600" fill="#1f1f1e" text-anchor="middle">Sonnet 5.5</text>
+<text x="407.8" y="153.0" font-size="13" fill="#1f1f1e" text-anchor="middle">30</text>
+<text x="394.6" y="369.0" font-size="13" fill="#6b6a63" text-anchor="middle">18</text>
+<line x1="469.3" y1="317.7" x2="466.8" y2="183.0" stroke="#2a78d6" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="469.3" cy="327.7" r="8" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/>
+<circle cx="466.8" cy="170.0" r="8" fill="#2a78d6" stroke="#fbfaf6" stroke-width="2"/>
+<text x="466.8" y="114.0" font-size="14" font-weight="600" fill="#1f1f1e" text-anchor="middle">Opus 5.5</text>
+<text x="466.8" y="153.0" font-size="13" fill="#1f1f1e" text-anchor="middle">30</text>
+<text x="469.3" y="354.7" font-size="13" fill="#6b6a63" text-anchor="middle">19</text>
+<line x1="526.1" y1="317.7" x2="524.7" y2="183.0" stroke="#2a78d6" stroke-width="2" marker-end="url(#a)"/>
+<circle cx="526.1" cy="327.7" r="8" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/>
+<circle cx="524.7" cy="170.0" r="8" fill="#2a78d6" stroke="#fbfaf6" stroke-width="2"/>
+<text x="524.7" y="136.0" font-size="14" font-weight="600" fill="#1f1f1e" text-anchor="middle">Fable 5.2</text>
+<text x="524.7" y="153.0" font-size="13" fill="#1f1f1e" text-anchor="middle">30</text>
+<text x="526.1" y="354.7" font-size="13" fill="#6b6a63" text-anchor="middle">19</text>
+<circle cx="100" cy="514.0" r="7" fill="#2a78d6"/><text x="114" y="519.0" font-size="13" fill="#1f1f1e">With context layer</text>
+<circle cx="100" cy="540.0" r="7" fill="#fbfaf6" stroke="#8a8980" stroke-width="2.5"/><text x="114" y="545.0" font-size="13" fill="#1f1f1e">Without context</text>
+<text x="936.0" y="156" font-size="13" font-weight="600" fill="#1f1f1e" text-anchor="middle">Haiku 5.5</text>
+<text x="1028.0" y="156" font-size="13" font-weight="600" fill="#1f1f1e" text-anchor="middle">Sonnet 5.5</text>
+<text x="1120.0" y="156" font-size="13" font-weight="600" fill="#1f1f1e" text-anchor="middle">Opus 5.5</text>
+<text x="1212.0" y="156" font-size="13" font-weight="600" fill="#1f1f1e" text-anchor="middle">Fable 5.2</text>
+<line x1="660" x2="1258" y1="170" y2="170" stroke="#e4e2da"/>
+<text x="660" y="204.0" font-size="14" fill="#1f1f1e">Plain lookup</text>
+<text x="936.0" y="205.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<text x="1028.0" y="205.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<text x="1120.0" y="205.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<text x="1212.0" y="205.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<line x1="660" x2="1258" y1="228" y2="228" stroke="#e4e2da"/>
+<text x="660" y="262.0" font-size="14" fill="#1f1f1e">One bank definition</text>
+<rect x="894.0" y="236" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="936.0" y="263.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">0</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="986.0" y="236" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1028.0" y="263.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">0</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="1078.0" y="236" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1120.0" y="263.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">0</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="1170.0" y="236" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1212.0" y="263.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">0</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<line x1="660" x2="1258" y1="286" y2="286" stroke="#e4e2da"/>
+<text x="660" y="320.0" font-size="14" fill="#1f1f1e">Two definitions combined</text>
+<rect x="894.0" y="294" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="936.0" y="321.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">1</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="986.0" y="294" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1028.0" y="321.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">0</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="1078.0" y="294" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1120.0" y="321.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">1</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="1170.0" y="294" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1212.0" y="321.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">1</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<line x1="660" x2="1258" y1="344" y2="344" stroke="#e4e2da"/>
+<text x="660" y="378.0" font-size="14" fill="#1f1f1e">Join across registers</text>
+<rect x="894.0" y="352" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="936.0" y="379.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">3</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="986.0" y="352" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1028.0" y="379.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">3</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="1078.0" y="352" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1120.0" y="379.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">3</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<rect x="1170.0" y="352" width="84" height="42" rx="4" fill="#dbe9fb"/>
+<text x="1212.0" y="379.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">3</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<line x1="660" x2="1258" y1="402" y2="402" stroke="#e4e2da"/>
+<text x="660" y="436.0" font-size="14" fill="#1f1f1e">Rule from the version in force</text>
+<text x="936.0" y="437.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">4</tspan></text>
+<text x="1028.0" y="437.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<text x="1120.0" y="437.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<text x="1212.0" y="437.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<line x1="660" x2="1258" y1="460" y2="460" stroke="#e4e2da"/>
+<text x="660" y="494.0" font-size="14" fill="#1f1f1e">Term the bank has not defined</text>
+<text x="936.0" y="495.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<text x="1028.0" y="495.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<text x="1120.0" y="495.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<text x="1212.0" y="495.0" font-size="16" text-anchor="middle"><tspan fill="#6b6a63">5</tspan><tspan fill="#6b6a63"> → </tspan><tspan fill="#1f1f1e" font-weight="600">5</tspan></text>
+<line x1="660" x2="1258" y1="518" y2="518" stroke="#e4e2da"/>
+<text x="660" y="542" font-size="12" fill="#6b6a63">Correct of 5, without → with context. Shaded where context changed the score.</text>
+<text x="660" y="622" font-size="11.5" fill="#6b6a63">One run per cell, 240 answers in 24 sessions of ten questions, 18 Nov 2026. Fictional data.</text>
+<text x="660" y="638" font-size="11.5" fill="#6b6a63">Questions, data and context written by the presenter; answers graded against the data files.</text>
+<text x="660" y="654" font-size="11.5" fill="#6b6a63">Cost is an estimate: tokens reported by Claude Code x input list price.</text>
+</svg>

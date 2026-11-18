@@ -69,3 +69,5 @@ Repeated on Sonnet 5.5, one run each, 18 November 2026. The first test above ran
 | Commands against Elasticsearch | 10, two of them failed | 2 |
 
 Both models made the same mistake without context and gave the same correct answer with it. One run per model, so this is an indication, not proof.
+
+A 30-question version across four models is in `results/matrix30/MATRIX30.md`.
