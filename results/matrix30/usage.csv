@@ -4,3 +4,7 @@ sonnet,base,3,84648,34,24
 sonnet,ctx,2,89745,35,19
 sonnet,base,1,91052,40,25
 sonnet,ctx,3,110688,44,21
+sonnet,ctx,1,91894,55,22
+haiku,base,2,96408,58,15
+haiku,base,3,90914,59,29
+haiku,ctx,2,117211,62,18
