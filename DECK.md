@@ -227,3 +227,17 @@ Be the first to say the caveat: five questions, one run each, and I built both t
 | The bank's definitions of "material outsourcing" and "reportable incident" | Invented for the demo | 2, 6 |
 
 Measured, not assumed: everything in the table on slide 7. Arithmetic: 193,289 − 51,272 = 142,017 tokens per task; × USD 3 per million = USD 0.43; × 27,600 tasks = USD 11,800; × 1,825,000 tasks = USD 778,000.
+
+## Added 18 November: the model matrix
+
+Three slides were added to the deck after the 30-question test (`results/matrix30/MATRIX30.md`).
+
+| Slide | Where | Time | Message |
+|---|---|---|---|
+| Four models, 30 questions | Main flow, after the value slide | 1:30 | Without context every model scores 18 or 19 of 30, with context 29 or 30. The smallest model with context beat the largest without, at about one sixtieth of the estimated cost per question. Build the context first, then pick the smallest model that passes the test questions. |
+| The gap is only where a bank definition is needed | Appendix | on request | Score by kind of question, per model. |
+| Three experiments before anyone should trust these numbers | Appendix | on request | Customer-written questions and repeated runs; scale and harder tasks; wrong and restricted context. |
+
+The value slide is cut from 3:00 to 2:00 to make room, so the talk grows by 30 seconds. Shorten the money part of the value slide when you rehearse.
+
+Limits to say out loud: one run per cell; the questions, data and context are mine; half the questions need a definition by design; cost is an estimate; the agent in this test was Claude Code, not Agent Builder.
