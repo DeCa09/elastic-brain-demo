@@ -1,0 +1,221 @@
+#!/usr/bin/env python3
+"""Ask the same questions to two agents and compare them.
+
+  albisgrat-brain     reads Knowledge Indicators from the AI Index first
+  albisgrat-baseline  same model, same data, no Knowledge Indicators
+
+For each run it records tool calls, LLM calls, tokens, seconds, and whether the answer names
+exactly the right records. The right records are computed here from the data files, not judged
+by a model. Writes results/RESULTS.md and results/answers/*.md.
+
+Every run uses the LLM. Three questions for two agents is six agent runs.
+Usage: scripts/compare.sh [question-id ...] [--only-brain]
+"""
+
+import json
+import os
+import re
+import sys
+import time
+import urllib.request
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+KIBANA_URL = os.environ.get("KIBANA_URL", "").rstrip("/")
+API_KEY = os.environ.get("ELASTIC_API_KEY", "")
+AGENTS = [("albisgrat-baseline", "Baseline, no context"), ("albisgrat-brain", "With Knowledge Indicators")]
+TODAY = os.environ.get("DEMO_TODAY", time.strftime("%Y-%m-%d"))
+# Empty: the project's default model. Set LLM_INFERENCE_ID to use another managed model,
+# for example .anthropic-claude-5-sonnet-chat_completion, when the default one is rate-limited.
+MODEL = os.environ.get("LLM_INFERENCE_ID", "")
+
+
+MODEL_NAMES = {"default": "Claude Sonnet 4.5 (project default)",
+               ".anthropic-claude-5-sonnet-chat_completion": "Claude Sonnet 5",
+               ".gp-llm-v2-chat_completion": "Elastic general purpose LLM v2"}
+
+
+def rows(name):
+    with open(os.path.join(ROOT, "data", name), encoding="utf-8") as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
+def questions():
+    inv, inc = rows("outsourcing_inventory.jsonl"), rows("incidents.jsonl")
+    year_ago = "%d%s" % (int(TODAY[:4]) - 1, TODAY[4:])
+    abroad = [r for r in inv if r["contains_client_data"] and r["data_location"] != "CH"]
+    overdue = [r for r in inv if r["status"] == "active" and r["last_review"] < year_ago]
+    late = [r for r in inc if r["category"] == "data_breach" and not r["reported_within_24h"]]
+    material = [r for r in inv if r["status"] == "active" and r["contains_client_data"]
+                and (r["criticality"] == "high" or r["annual_cost_chf"] >= 200000)]
+    reportable = [r for r in inc if "2026-07-01" <= r["date"] <= "2026-09-30" and (
+        (r["category"] == "data_breach" and r["severity"] in ("medium", "high"))
+        or r["category"] == "access_violation")]
+    return [
+        {"id": "material", "language": "de", "needs_definition": True,
+         "question": "Welche unserer Auslagerungen gelten als wesentliche Auslagerungen? "
+                     "Liste die IDs auf.",
+         "expected": sorted(r["arrangement_id"] for r in material), "pattern": r"OUT-\d{3}",
+         "note": "The bank's own definition: active, client data, and criticality high or cost of "
+                 "CHF 200,000 or more. Criticality alone gives a different list."},
+        {"id": "reportable", "language": "en", "needs_definition": True,
+         "question": "Which reportable incidents did we have in the third quarter of 2026? "
+                     "List the ids.",
+         "expected": sorted(r["incident_id"] for r in reportable), "pattern": r"INC-2026-\d{3}",
+         "note": "The bank's own definition: data breaches of medium or high severity, and all "
+                 "access violations. Phishing and outages do not count."},
+        {"id": "location", "language": "en",
+         "question": "Which outsourcing arrangements store client data outside Switzerland, and does "
+                     "our directive allow each of them?",
+         "expected": sorted(r["arrangement_id"] for r in abroad), "pattern": r"OUT-\d{3}",
+         "note": "Not allowed: %s. Allowed (EU with board approval): %s." % (
+             ", ".join(r["arrangement_id"] for r in abroad
+                       if r["data_location"] != "EU" or not r["board_approval_eu"]),
+             ", ".join(r["arrangement_id"] for r in abroad
+                       if r["data_location"] == "EU" and r["board_approval_eu"]))},
+        {"id": "overdue", "language": "de",
+         "question": "Bei welchen aktiven Auslagerungen ist die jährliche Überprüfung überfällig?",
+         "expected": sorted(r["arrangement_id"] for r in overdue), "pattern": r"OUT-\d{3}",
+         "note": "Overdue means last review more than 12 months ago (W-12 v3.0, section 8)."},
+        {"id": "late-breaches", "language": "fr",
+         "question": "Quelles violations de la sécurité des données ont été annoncées en retard cette "
+                     "année, et lesquelles concernent un prestataire externe ?",
+         "expected": sorted(r["incident_id"] for r in late), "pattern": r"INC-2026-\d{3}",
+         "note": "Late means not reported within 24 hours (P-11). With a provider: %s." % (
+             ", ".join("%s (%s)" % (r["incident_id"], r["related_arrangement_id"])
+                       for r in late if r["related_arrangement_id"]) or "none")},
+    ]
+
+
+def ask(agent_id, question):
+    payload = {"input": question, "agent_id": agent_id}
+    if MODEL:
+        payload["inference_id"] = MODEL     # another managed model, with its own trial quota
+    body = json.dumps(payload).encode()
+    req = urllib.request.Request(
+        KIBANA_URL + "/api/agent_builder/converse/async", method="POST", data=body,
+        headers={"Authorization": "ApiKey " + API_KEY, "kbn-xsrf": "true",
+                 "Content-Type": "application/json"})
+    start = time.time()
+    out = {"tool_calls": [], "answer": "", "llm_calls": 0, "input_tokens": 0, "output_tokens": 0}
+    event = None
+    with urllib.request.urlopen(req, timeout=600) as resp:
+        for raw in resp:
+            line = raw.decode("utf-8", errors="replace").rstrip("\n")
+            if line.startswith("event: "):
+                event = line[7:]
+            elif line.startswith("data: ") and event:
+                try:
+                    data = json.loads(line[6:]).get("data", {})
+                except ValueError:
+                    continue
+                if event == "tool_call":
+                    out["tool_calls"].append(data.get("tool_id", "?"))
+                elif event == "error":
+                    out["error"] = json.loads(line[6:]).get("error", {}).get("message", "error")
+                elif event == "message_complete":
+                    out["answer"] = data.get("message_content", "")
+                elif event == "round_complete":
+                    usage = (data.get("round") or {}).get("model_usage") or {}
+                    for key in ("llm_calls", "input_tokens", "output_tokens"):
+                        out[key] = usage.get(key, 0)
+    out["seconds"] = round(time.time() - start)
+    return out
+
+
+def grade(answer, q):
+    found = sorted(set(re.findall(q["pattern"], answer)))
+    missing = [x for x in q["expected"] if x not in found]
+    extra = [x for x in found if x not in q["expected"]]
+    return {"found": found, "missing": missing, "extra": extra, "correct": not missing and not extra}
+
+
+def main():
+    if not KIBANA_URL or not API_KEY:
+        sys.exit("Set KIBANA_URL and ELASTIC_API_KEY (see .env.example)")
+    args = sys.argv[1:]
+    only_brain = "--only-brain" in args      # skip the baseline, which uses far more tokens
+    wanted = [a for a in args if not a.startswith("--")]
+    all_qs = questions()
+    os.makedirs(os.path.join(ROOT, "results", "answers"), exist_ok=True)
+    cache_path = os.path.join(ROOT, "results", "answers", "runs.json")
+    cache = json.load(open(cache_path)) if os.path.exists(cache_path) else {}
+    for q in [q for q in all_qs if not wanted or q["id"] in wanted]:
+        for agent_id, label in AGENTS:
+            if only_brain and agent_id != "albisgrat-brain":
+                continue
+            print("asking %s: %s" % (agent_id, q["id"]), flush=True)
+            try:
+                run = ask(agent_id, q["question"])
+            except Exception as err:  # noqa: BLE001
+                run = {"tool_calls": [], "answer": "ERROR: %s" % err, "llm_calls": 0,
+                       "input_tokens": 0, "output_tokens": 0, "seconds": 0}
+            if run.get("error") or not run["answer"]:
+                print("  FAILED, not recorded: %s" % str(run.get("error") or "empty answer")[:260])
+                continue
+            run.update(grade(run["answer"], q))
+            run.update({"agent": agent_id, "label": label, "date": TODAY,
+                        "model": MODEL or "default"})
+            cache["%s|%s" % (q["id"], agent_id)] = run
+            with open(cache_path, "w", encoding="utf-8") as f:
+                json.dump(cache, f, ensure_ascii=False, indent=1)
+            with open(os.path.join(ROOT, "results", "answers", "%s--%s.md" % (q["id"], agent_id)), "w",
+                      encoding="utf-8") as f:
+                f.write("# %s\n\nAgent: %s\n\nQuestion: %s\n\nExpected records: %s\n\n"
+                        "Tools called: %s\n\n---\n\n%s\n"
+                        % (q["id"], label, q["question"], ", ".join(q["expected"]),
+                           ", ".join(run["tool_calls"]), run["answer"]))
+
+    # Report every run on record, including earlier ones.
+    results, qs = [], []
+    for q in all_qs:
+        for agent_id, label in AGENTS:
+            run = cache.get("%s|%s" % (q["id"], agent_id))
+            if run:
+                run = dict(run, q=q)
+                results.append(run)
+                if q not in qs:
+                    qs.append(q)
+
+    out = ["# Company brain: with and without Knowledge Indicators", "",
+           "Same questions, same data, same model. One agent reads Knowledge Indicators from the AI "
+           "Index first; the baseline explores the indices by itself. \"Correct\" means the answer names "
+           "exactly the records computed from the data files. Runs from %s. Where a question has no "
+           "baseline row, the baseline was not run for it, to save tokens."
+           % ", ".join(sorted({r["date"] for r in results})), "",
+           "| Question | Agent | Correct | Tool calls | LLM calls | Tokens | Seconds | Model |",
+           "|---|---|---|---|---|---|---|---|"]
+    for r in results:
+        detail = "yes" if r["correct"] else "no (%s)" % "; ".join(
+            x for x in ("missing " + ", ".join(r["missing"]) if r["missing"] else "",
+                        "wrong " + ", ".join(r["extra"]) if r["extra"] else "") if x)
+        out.append("| %s (%s) | %s | %s | %d | %d | %s | %d | %s |" % (
+            r["q"]["id"], r["q"]["language"], r["label"], detail, len(r["tool_calls"]),
+            r["llm_calls"], format(r["input_tokens"] + r["output_tokens"], ","), r["seconds"],
+            MODEL_NAMES.get(r.get("model", "default"), r.get("model", "default"))))
+    out += ["", "## Per agent (averages per question)", "",
+            "| Agent | Correct | Tool calls | Tokens | Seconds |", "|---|---|---|---|---|"]
+    for agent_id, label in AGENTS:
+        mine = [r for r in results if r["agent"] == agent_id]
+        if not mine:
+            continue
+        n = float(len(mine))
+        out.append("| %s | %d of %d | %.1f | %s | %d |" % (
+            label, sum(r["correct"] for r in mine), len(mine),
+            sum(len(r["tool_calls"]) for r in mine) / n,
+            format(int(sum(r["input_tokens"] + r["output_tokens"] for r in mine) / n), ","),
+            sum(r["seconds"] for r in mine) / n))
+    out += ["", "## The questions", ""]
+    for q in qs:
+        out += ["- **%s**: %s  " % (q["id"], q["question"]),
+                "  Expected: %s. %s" % (", ".join(q["expected"]), q["note"])]
+    out += ["", "Agents are not deterministic. One run per question shows direction, not proof. "
+            "The full answers are in `results/answers/`."]
+    text = "\n".join(out) + "\n"
+    with open(os.path.join(ROOT, "results", "RESULTS.md"), "w", encoding="utf-8") as f:
+        f.write(text)
+    print("\n" + text)
+
+
+if __name__ == "__main__":
+    main()
