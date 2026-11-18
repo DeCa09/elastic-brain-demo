@@ -1,1 +1,6 @@
 model,condition,batch,tokens,seconds,commands
+sonnet,base,2,78440,29,13
+sonnet,base,3,84648,34,24
+sonnet,ctx,2,89745,35,19
+sonnet,base,1,91052,40,25
+sonnet,ctx,3,110688,44,21
