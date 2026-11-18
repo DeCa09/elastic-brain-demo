@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(../../data/**)",
+      "Read(../../results/**)",
+      "Read(../../brain/**)",
+      "Read(../../*.md)",
+      "Read(../../.env)"
+    ]
+  }
+}
